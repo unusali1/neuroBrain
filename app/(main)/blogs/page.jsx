@@ -1,182 +1,107 @@
+"use client";
+import React, { useState } from "react";
 import { blogData } from "@/Data/BlogsData";
 import Image from "next/image";
-import React from "react";
 import { Icon } from "@iconify/react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
-const page = () => {
+// Extract all unique categories from blogData dynamically
+const categories = [
+  "All Posts",
+  ...new Set(blogData.map((blog) => blog.category)),
+];
+
+const BlogPage = () => {
+  const router = useRouter();
+  const [selectedCategory, setSelectedCategory] = useState("All Posts");
+
+  const filteredBlogs =
+    selectedCategory === "All Posts"
+      ? blogData
+      : blogData.filter((blog) => blog.category === selectedCategory);
+
   return (
-    <>
-      <div className="mt-12 mb-24 min-h-screen">
-        <div className=" px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 sm:gap-6">
-            <div className="hidden lg:block p-4 space-y-6">
-              <div>
-                <h2 className="font-semibold text-xl text-gray-800 mb-4">
-                  Categories
-                </h2>
-                <ul className="divide-y divide-gray-200">
-                  {[
-                    "AI",
-                    "Business",
-                    "Chatbots",
-                    "Customer Engagement",
-                    "Healthcare",
-                    "Tech",
-                  ].map((category, idx) => (
-                    <li
-                      key={idx}
-                      className="py-3 text-gray-700 font-medium hover:text-blue-600 cursor-pointer transition-colors duration-300"
-                    >
-                      <span className="flex items-center space-x-2">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5 text-blue-500"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                        <span>{category}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+    <div className="container mx-auto mt-12 mb-24 min-h-screen px-4 sm:px-8 md:px-12">
+      {/* Header */}
+      <div className="mb-12 text-center">
+        <h2 className="font-extrabold text-4xl sm:text-5xl text-gray-900">
+          Latest Insights
+        </h2>
+        <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">
+          Explore expert-written posts, industry news, and deep dives into how
+          AI and digital solutions are reshaping the world.
+        </p>
+      </div>
+
+      {/* Category Filters */}
+      <div className="flex flex-wrap justify-center gap-3 mb-10">
+        {categories.map((category, idx) => (
+          <button
+            key={idx}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+              selectedCategory === category
+                ? "bg-indigo-600 text-white focus:ring-indigo-500"
+                : "bg-gray-100 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 focus:ring-gray-300"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      {/* Blog Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredBlogs.length > 0 ? (
+          filteredBlogs.map((blog) => (
+            <div
+              key={blog.id}
+              className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-[1.02] hover:shadow-2xl"
+              onClick={()=>router.push(`/blogs/${blog.id}`)}
+            >
+              {/* Image */}
+              <div className="relative">
+                <Image
+                  src={blog.img}
+                  alt={blog.title}
+                  className="w-full h-48 object-cover"
+                  height={200}
+                  width={400}
+                />
+                <div className="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  {blog.category}
+                </div>
               </div>
 
-              <div>
-                <h2 className="font-semibold text-2xl text-gray-800 mb-4">
-                  Popular Posts
+              {/* Content */}
+              <div className="p-6">
+                <div className="flex items-center space-x-2 text-gray-500 text-sm">
+                  <Icon icon="stash:data-date" width={16} height={16} />
+                  <span>{blog.date}</span>
+                </div>
+                <h2 className="text-xl font-semibold text-gray-800 mt-3 mb-2 line-clamp-2">
+                  {blog.title}
                 </h2>
-                <div className="grid grid-cols-1 gap-6">
-                  {blogData.map((blog) => (
-                    <div
-                      key={blog.id}
-                      className="flex  overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                    >
-                      <div className="w-24 h-24 flex-shrink-0">
-                        <Image
-                          src={blog.img}
-                          alt={blog.category}
-                          width={80}
-                          height={80}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                <p className="text-gray-600 text-sm line-clamp-3">
+                  {blog.description}
+                </p>
 
-                      <div className="flex flex-col  p-4">
-                        <h2 className="text-base text-gray-800 ">
-                          {blog.title || "Untitled Blog"}
-                        </h2>
-                        <div className="flex items-center text-gray-500 text-sm mt-1 ">
-                          <Icon icon="stash:data-date" width={16} height={16} />
-                          <span className="ml-2">{blog.date}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                {/* Dialog Modal */}
+                <div className="mt-4">
+                  <Button variant="outline">Read More →</Button>
                 </div>
               </div>
             </div>
-
-            <div className="lg:col-span-2 space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                {blogData.map((blog) => (
-                  <div
-                    key={blog.id}
-                    className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
-                  >
-                    <div className="relative">
-                      <Image
-                        src={blog.img}
-                        alt={blog.category}
-                        className="w-full h-48 object-cover"
-                        height={200}
-                        width={400}
-                      />
-                      <div className="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        {blog.category}
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center space-x-2 text-gray-500 text-sm">
-                        <Icon icon="stash:data-date" width={16} height={16} />
-                        <span>{blog.date}</span>
-                      </div>
-                      <h2 className="text-xl font-semibold text-gray-800 mt-3 mb-2 line-clamp-2">
-                        {blog.title || "Untitled Blog"}
-                      </h2>
-                      <p className="text-gray-600 text-sm line-clamp-3">
-                        {blog.description}
-                      </p>
-
-                      <div className="mt-4">
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <Button variant="outline"> Read More → </Button>
-                          </DialogTrigger>
-                          <DialogContent className="sm:max-w-[825px]">
-                            <div key={blog.id} className="">
-                              <div className="relative">
-                                <Image
-                                  src={blog.img}
-                                  alt={blog.category}
-                                  className="w-full h-80 object-cover"
-                                  height={200}
-                                  width={300}
-                                />
-                                <div className="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                  {blog.category}
-                                </div>
-                              </div>
-                              <div className="p-6">
-                                <div className="flex items-center space-x-2 text-gray-500 text-sm">
-                                  <Icon
-                                    icon="stash:data-date"
-                                    width={16}
-                                    height={16}
-                                  />
-                                  <span>{blog.date}</span>
-                                </div>
-                                <h2 className="text-xl font-semibold text-gray-800 mt-3 mb-2 line-clamp-2">
-                                  {blog.title || "Untitled Blog"}
-                                </h2>
-                                <p className="text-gray-600 text-sm line-clamp-3">
-                                  {blog.description}
-                                </p>
-                              </div>
-                            </div>
-                            <DialogFooter>
-                              <Button type="submit">Done</Button>
-                            </DialogFooter>
-                          </DialogContent>
-                        </Dialog>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+          ))
+        ) : (
+          <p className="col-span-full text-center text-gray-500">
+            No posts found in this category.
+          </p>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
-export default page;
+export default BlogPage;

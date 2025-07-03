@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
                 </h2>
                 <p className="text-gray-700 mb-4">
                     Your privacy is important to us at{" "}
-                    <span className="font-semibold">Congent AI</span>. Here is how your
+                    <span className="font-semibold">NeuroBrain</span>. Here is how your
                     privacy is maintained:
                 </p>
 
@@ -61,16 +61,16 @@ const PrivacyPolicy = () => {
                     Website Visitors
                 </h2>
                 <p className="text-gray-700 mb-6  text-justify">
-                    Like most internet-service operators, Congent AI also collects
+                    Like most internet-service operators, NeuroBrain also collects
                     non-personally-identifying information of the sort that web browsers,
                     apps and servers typically make available, such as the browser type,
                     language preference, geographical location, referring site, and the
                     date and time of each visitor request. The purpose of collecting
                     non-personally identifying information is to better understand how
-                    Congent AI visitors use its services. From time to time, Congent AI
+                    NeuroBrain visitors use its services. From time to time, NeuroBrain
                     may also release non-personally-identifying information in the
                     aggregate, e.g., by publishing a report on trends in the usage of its
-                    services. Congent AI also collects potentially personally-identifying
+                    services. NeuroBrain also collects potentially personally-identifying
                     information like Internet Protocol (IP) addresses for users that use
                     the services and visitors. For example, if you register for an account
                     with us, we may ask you for personal information such as email, name,
@@ -86,20 +86,19 @@ const PrivacyPolicy = () => {
                     Non-Identifiable Data
                 </h2>
                 <p className="text-gray-700 mb-6 text-justify">
-                    When you interact with Congent AI through the Service, we receive and
+                    When you interact with NeuroBrain through the Service, we receive and
                     store certain information, which is collected passively using various
                     cookies and similar technologies, and cannot presently be used to
                     specifically identify you. We also engage third party providers to
                     serve a variety of marketing cookies that track and analyse usage,
                     navigational and other statistical information from visitors to Our
-                    Site, which does not include personal information but Congent AI and
+                    Site, which does not include personal information but NeuroBrain and
                     its service providers may store such information itself or such
-                    information may be stored in databases owned and maintained by Congent
-                    AI or its agents or service providers. Our Service may use such
+                    information may be stored in databases owned and maintained by NeuroBrain or its agents or service providers. Our Service may use such
                     information and pool it with other information to track, for example,
                     the total number of visitors to Our Site, the number of visitors to
                     each page of Our Site, or the domain names of our visitors Internet
-                    service providers. When you interact with Congent AI through the Site,
+                    service providers. When you interact with NeuroBrain through the Site,
                     we use third party providers to serve a variety of marketing and
                     operational cookies that enable us to track and analyse usage,
                     navigational and other statistical information from visitors to the

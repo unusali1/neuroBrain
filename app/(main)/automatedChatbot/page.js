@@ -8,7 +8,7 @@ const AutomatedChatbot = () => {
         </h2>
 
         <p className="text-gray-700 mb-6 text-justify">
-            Welcome to the future of customer interaction! Our Congent AI-powered Automated Chatbot is designed to assist you in real-time, answering your questions, guiding you through services, and providing valuable information anytime you need it. 
+            Welcome to the future of customer interaction! Our NeuroBrain-powered Automated Chatbot is designed to assist you in real-time, answering your questions, guiding you through services, and providing valuable information anytime you need it. 
             Powered by cutting-edge AI technology, our chatbot is available 24/7, ready to handle a wide range of customer inquiries seamlessly.
             Whether you need support with a product, require help navigating our services, or just have a general question, our chatbot is always here to provide quick and accurate responses.
         </p>

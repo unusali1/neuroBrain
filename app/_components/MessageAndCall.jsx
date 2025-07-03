@@ -39,7 +39,7 @@ const MessageAndCall = () => {
   const [chatHistory, setChatHistory] = useState([
     {
       sender: "bot",
-      text: "👋 Hi! I’m CongentAI Chatbot. Nice to meet you. How may I help you today?",
+      text: "👋 Hi! I’m NeuroBrain Chatbot. Nice to meet you. How may I help you today?",
       image: "",
       products: [],
       date: "",
@@ -239,7 +239,7 @@ const MessageAndCall = () => {
     setChatHistory([
       {
         sender: "bot",
-        text: "👋 Hi! I’m CongentAI Chatbot. Nice to meet you. How may I help you today?",
+        text: "👋 Hi! I’m NeuroBrain Chatbot. Nice to meet you. How may I help you today?",
         products: [],
       },
     ]);
@@ -293,7 +293,7 @@ const MessageAndCall = () => {
                       </div>
                       <div>
                         <h4 className="text-white text-lg font-semibold">
-                          CongentAI Chatbot
+                          NeuroBrain Chatbot
                         </h4>
                         <p className="text-sm text-gray-200 font-semibold">
                           Intelligent Guide

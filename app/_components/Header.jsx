@@ -99,10 +99,11 @@ export default function Header() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           {[
             { name: "Home", href: "/" },
+            { name: "Products", href: "/product" },
+            { name: "Services", href: "/services" },
             { name: "Pricing", href: "/pricing" },
             { name: "Blog", href: "/blogs" },
             { name: "About Us", href: "/about" },
-            { name: "Contact Us", href: "/contact" },
           ].map((link) => (
             <a
               key={link.href}

@@ -10,21 +10,21 @@ const TermsAndCondition = () => {
             </h2>
 
             <p className="text-gray-700 mb-6 text-justify">
-                Welcome to Congent AI! These Terms of Service govern your use of our chatbot and voice assistant services (collectively referred to as "Services"). By using our Services, you agree to comply with these Terms. If you do not agree to these Terms, you should not use our Services.
+                Welcome to NeuroBrain These Terms of Service govern your use of our chatbot and voice assistant services (collectively referred to as "Services"). By using our Services, you agree to comply with these Terms. If you do not agree to these Terms, you should not use our Services.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
                 1. ACCEPTANCE OF TERMS
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                By accessing or using the Congent AI platform, you agree to abide by the Terms and all applicable laws and regulations. If you do not agree with any part of these Terms, you are prohibited from using the platform.
+                By accessing or using the NeuroBrain platform, you agree to abide by the Terms and all applicable laws and regulations. If you do not agree with any part of these Terms, you are prohibited from using the platform.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
                 2. CHANGES TO TERMS
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                Congent AI reserves the right to modify or revise these Terms at any time. We will notify you of significant changes to these Terms by posting an updated version on our website. It is your responsibility to review these Terms regularly.
+               NeuroBrain reserves the right to modify or revise these Terms at any time. We will notify you of significant changes to these Terms by posting an updated version on our website. It is your responsibility to review these Terms regularly.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
@@ -52,14 +52,14 @@ const TermsAndCondition = () => {
                 6. INTELLECTUAL PROPERTY
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                All content, features, and functionality within the Services, including but not limited to text, graphics, logos, and software, are owned by Congent AI or its licensors and are protected by intellectual property laws. You may not copy, distribute, modify, or create derivative works from any of the content without our express permission.
+                All content, features, and functionality within the Services, including but not limited to text, graphics, logos, and software, are owned by NeuroBrain or its licensors and are protected by intellectual property laws. You may not copy, distribute, modify, or create derivative works from any of the content without our express permission.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
                 7. LIMITATION OF LIABILITY
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                To the fullest extent permitted by applicable law, Congent AI is not liable for any direct, indirect, incidental, special, or consequential damages arising from your use of the Services. This includes any damages resulting from loss of data, interruption of services, or failure to meet expectations.
+                To the fullest extent permitted by applicable law, NeuroBrain is not liable for any direct, indirect, incidental, special, or consequential damages arising from your use of the Services. This includes any damages resulting from loss of data, interruption of services, or failure to meet expectations.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
@@ -93,35 +93,35 @@ const TermsAndCondition = () => {
                 11. SERVICE AVAILABILITY AND INTERRUPTIONS
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                While we strive to ensure that our Services are available at all times, Congent AI does not guarantee that the Services will be free from interruptions, delays, or errors. We reserve the right to modify, suspend, or discontinue the Services at any time, without notice, for maintenance, upgrades, or other reasons.
+                While we strive to ensure that our Services are available at all times, NeuroBrain does not guarantee that the Services will be free from interruptions, delays, or errors. We reserve the right to modify, suspend, or discontinue the Services at any time, without notice, for maintenance, upgrades, or other reasons.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
                 12. USER CONTENT
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                You may upload or input content to interact with our chatbot or voice assistant. You retain ownership of the content you provide, but by submitting it to our platform, you grant Congent AI a worldwide, royalty-free, and non-exclusive license to use, store, and process the content to provide our Services. You agree that you will not submit content that is illegal, offensive, or infringes on third-party rights.
+                You may upload or input content to interact with our chatbot or voice assistant. You retain ownership of the content you provide, but by submitting it to our platform, you grant NeuroBrain a worldwide, royalty-free, and non-exclusive license to use, store, and process the content to provide our Services. You agree that you will not submit content that is illegal, offensive, or infringes on third-party rights.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
                 13. THIRD-PARTY SERVICES
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                Our Services may contain links to third-party websites, applications, or services that are not controlled by Congent AI. We are not responsible for the content or privacy practices of these third-party services. You access these services at your own risk and should review their terms and conditions.
+                Our Services may contain links to third-party websites, applications, or services that are not controlled by NeuroBrain. We are not responsible for the content or privacy practices of these third-party services. You access these services at your own risk and should review their terms and conditions.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
                 14. WARRANTIES AND DISCLAIMERS
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                Our Services are provided “as is” and “as available,” without any warranties of any kind, either express or implied. Congent AI does not warrant that the Services will be error-free or meet your expectations. To the fullest extent permitted by law, we disclaim all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
+                Our Services are provided “as is” and “as available,” without any warranties of any kind, either express or implied. NeuroBrain does not warrant that the Services will be error-free or meet your expectations. To the fullest extent permitted by law, we disclaim all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">
                 15. INDEMNIFICATION
             </h3>
             <p className="text-gray-700 mb-6 text-justify">
-                You agree to indemnify, defend, and hold harmless Congent AI and its affiliates, employees, officers, and directors from any claims, damages, losses, or expenses (including legal fees) arising from your use of the Services, your violation of these Terms, or any content you submit.
+                You agree to indemnify, defend, and hold harmless NeuroBrain and its affiliates, employees, officers, and directors from any claims, damages, losses, or expenses (including legal fees) arising from your use of the Services, your violation of these Terms, or any content you submit.
             </p>
 
             <h3 className="text-xl font-semibold text-cyan-600 mb-4">

@@ -3,34 +3,127 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import heroImg from "../../public/assets/homeHero.png";
-import chatImg from "../../public/assets/chatImg.webp";
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import { Icon } from "@iconify/react";
+import heroImg from "../../public/assets/homeHero.webp";
+
+// Steps with Iconify icons
+const steps = [
+  {
+    icon: (
+      <Icon
+        icon="material-symbols-light:handshake-outline"
+        width={24}
+        height={24}
+        className="text-white"
+      />
+    ),
+    text: "Enhance Customer Experience",
+  },
+  {
+    icon: (
+      <Icon
+        icon="streamline-pixel:money-payments-accounting-bill-money-1"
+        width={24}
+        height={24}
+        className="text-white"
+      />
+    ),
+    text: "Reducing Operational Cost",
+  },
+  {
+    icon: (
+      <Icon
+        icon="streamline-ultimate:performance-increase"
+        width={24}
+        height={24}
+        className="text-white"
+      />
+    ),
+    text: "Increase Revenue",
+  },
+];
+
+// Animation variants for fade-in and slide-in effects
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const Banner = () => {
   const router = useRouter();
 
   return (
-    <section className="relative bg-gradient-to-r from-gray-100 to-gray-200 py-12 md:py-24 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12">
+    <section className="relative bg-gradient-to-r bg-[#F3F4F6] py-2 md:py-20 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
           {/* Text Content */}
-          <div className="text-center lg:text-left space-y-6 animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 tracking-tight">
-              AI-Powered Chatbot with Seamless Human Handover
+          <motion.div
+            className="text-center lg:text-left space-y-8"
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+          >
+            <h1 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tight text-gray-900 tracking-tight font-sans">
+              Automate Your Customer Support
             </h1>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
-              Boost service efficiency by 10X with AI-driven chatbots and seamless human agent handovers for smoother customer interactions.
+            <h2 className="text-lg sm:text-xl lg:text-md text-indigo-600 font-semibold">
+              <TypeAnimation
+                sequence={[
+                  "with AI chatbot and voice assistant for 24/7 support",
+                  2000,
+                  "to streamline customer interactions effortlessly",
+                  2000,
+                  "and boost satisfaction with instant responses",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </h2>
+
+            {/* Steps Section */}
+            <div className="flex flex-col items-start space-y-6 ">
+              {steps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center relative"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  {/* Line connector */}
+                  {index !== steps.length - 1 && (
+                    <div className="absolute left-5 top-full h-10 border-l-2 border-dashed border-indigo-400" />
+                  )}
+                  {/* Icon inside diamond */}
+                  <div className="bg-indigo-500 p-2 rounded-md transform rotate-45 shadow-md mt-2">
+                    <div className="-rotate-45">{step.icon}</div>
+                  </div>
+                  {/* Text */}
+                  <div className="ml-4 text-gray-800 text-lg font-medium">
+                    {step.text}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <p className="text-base sm:text-lg text-gray-700 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Boost service efficiency by 10X with AI-driven chatbots and
+              seamless human agent handovers for smoother customer interactions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 text-base font-semibold tracking-wide"
+                className="px-8 py-6 border-2 border-indigo-600 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg font-semibold"
                 onClick={() => router.push("/contact")}
                 aria-label="Start a free trial"
               >
                 Start Free Trial
               </Button>
               <Button
-                className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg shadow-lg hover:bg-blue-50 hover:scale-105 transition-transform duration-300 text-base font-semibold tracking-wide"
+                className="px-8 py-6 border-2 border-indigo-600 text-indigo-600 rounded-lg shadow-md hover:bg-indigo-50 hover:scale-105 transition-all duration-300 text-lg font-semibold"
                 variant="outline"
                 onClick={() => router.push("/contact")}
                 aria-label="Book a demo"
@@ -38,42 +131,27 @@ const Banner = () => {
                 Book a Demo
               </Button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Image Section */}
-          <div className="relative mt-8 lg:mt-0 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md lg:max-w-lg">
+          <motion.div
+            className="mt-10 lg:mt-0 flex justify-center lg:justify-end"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <div className="flex w-full max-w-md lg:max-w-xl justify-end">
               <Image
                 src={heroImg}
-                width={600}
-                height={600}
+                width={400}
+                height={500}
                 alt="AI Chatbot Hero Illustration"
                 priority
-                className="object-contain"
+                className="object-contain rounded-lg justify-end"
               />
-              <div className="absolute -top-4 -right-4 sm:top-0 sm:right-0 lg:top-8 lg:right-12">
-                <Image
-                  src={chatImg}
-                  width={100}
-                  height={100}
-                  alt="Chat Icon"
-                  className="rounded-full shadow-md border-4 border-white"
-                />
-              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
-
-      {/* Optional Background Decoration */}
-      <div className="absolute inset-0 -z-10 opacity-10">
-        <svg className="w-full h-full" viewBox="0 0 1440 320">
-          <path
-            fill="#3b82f6"
-            fillOpacity="0.3"
-            d="M0,160L80,186.7C160,213,320,267,480,266.7C640,267,800,213,960,186.7C1120,160,1280,160,1360,160L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-          ></path>
-        </svg>
       </div>
     </section>
   );

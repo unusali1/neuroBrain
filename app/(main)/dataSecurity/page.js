@@ -8,7 +8,7 @@ const DataSecurity = () => {
         </h2>
 
         <p className="text-gray-700 mb-6 text-justify">
-            At Congent AI, we take the security of your data seriously. Your trust in our services is important to us, which is why we implement robust measures to ensure that your personal data remains safe and secure.
+            At NeuroBrain, we take the security of your data seriously. Your trust in our services is important to us, which is why we implement robust measures to ensure that your personal data remains safe and secure.
         </p>
 
         <h3 className="text-2xl font-semibold text-cyan-600 mb-4">
@@ -85,7 +85,7 @@ const DataSecurity = () => {
             11. Third-Party Service Providers
         </h3>
         <p className="text-gray-700 mb-6 text-justify">
-            Any third-party service providers that we collaborate with are carefully vetted for their security practices. We ensure that they meet the same high standards of data protection as Congent AI, and that they comply with privacy laws to safeguard your data.
+            Any third-party service providers that we collaborate with are carefully vetted for their security practices. We ensure that they meet the same high standards of data protection as NeuroBrain, and that they comply with privacy laws to safeguard your data.
         </p>
 
         <h3 className="text-2xl font-semibold text-cyan-600 mb-4">

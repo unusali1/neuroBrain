@@ -16,9 +16,9 @@ const Faqs = () => {
             <div>
                 <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="item-1">
-                        <AccordionTrigger>What is Congent AI's chatbot and voice assistant?</AccordionTrigger>
+                        <AccordionTrigger>What is NeuroBrain's chatbot and voice assistant?</AccordionTrigger>
                         <AccordionContent>
-                            Congent AI offers a conversational chatbot and voice assistant designed to provide users with automated support, assistance, and information. The AI system can answer queries, assist with tasks, and provide personalized recommendations based on user interactions.
+                            NeuroBrain offers a conversational chatbot and voice assistant designed to provide users with automated support, assistance, and information. The AI system can answer queries, assist with tasks, and provide personalized recommendations based on user interactions.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -39,7 +39,7 @@ const Faqs = () => {
                     <AccordionItem value="item-4">
                         <AccordionTrigger>Can I customize the responses from the AI assistant?</AccordionTrigger>
                         <AccordionContent>
-                            Currently, Congent AI offers a standard set of responses and services. However, we are continually working on improvements, and customizations may become available in future updates. Please stay tuned for more features and options.
+                            Currently, NeuroBrain offers a standard set of responses and services. However, we are continually working on improvements, and customizations may become available in future updates. Please stay tuned for more features and options.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -53,14 +53,14 @@ const Faqs = () => {
                     <AccordionItem value="item-6">
                         <AccordionTrigger>Can I use the chatbot and voice assistant on mobile devices?</AccordionTrigger>
                         <AccordionContent>
-                            Yes, Congent AI's chatbot and voice assistant are fully compatible with mobile devices. You can interact with the AI through your smartphone or tablet, either through a web interface or our dedicated mobile app (if available).
+                            Yes, NeuroBrain's chatbot and voice assistant are fully compatible with mobile devices. You can interact with the AI through your smartphone or tablet, either through a web interface or our dedicated mobile app (if available).
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-7">
-                        <AccordionTrigger>What languages does Congent AI support?</AccordionTrigger>
+                        <AccordionTrigger>What languages does NeuroBrain support?</AccordionTrigger>
                         <AccordionContent>
-                            Currently, Congent AI supports multiple languages, including English. We are working on expanding the language options, and more languages will be added in future updates. Stay tuned for announcements.
+                            Currently, NeuroBrain supports multiple languages, including English. We are working on expanding the language options, and more languages will be added in future updates. Stay tuned for announcements.
                         </AccordionContent>
                     </AccordionItem>
 

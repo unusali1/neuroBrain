@@ -8,14 +8,14 @@ const Support = () => {
         </h2>
 
         <p className="text-gray-700 mb-6 text-justify">
-            At Congent AI, we are committed to providing you with the best support experience possible. Whether you have a question about our chatbot, voice assistant, or need help with any technical issues, we are here to assist you. Below are the different ways you can get in touch with us for support:
+            At NeuroBrain, we are committed to providing you with the best support experience possible. Whether you have a question about our chatbot, voice assistant, or need help with any technical issues, we are here to assist you. Below are the different ways you can get in touch with us for support:
         </p>
 
         <h3 className="text-2xl font-semibold text-cyan-600 mb-4">
             1. Customer Support Email
         </h3>
         <p className="text-gray-700 mb-6 text-justify">
-            Our support team is available to assist you via email. You can send any inquiries, technical issues, or feedback to <a href="mailto:support@congentai.com" className="text-cyan-600">support@congentai.com</a>. We strive to respond to all inquiries within 24-48 hours.
+            Our support team is available to assist you via email. You can send any inquiries, technical issues, or feedback to <a href="mailto:support@neuroBrain.com" className="text-cyan-600">support@NeuroBrain.com</a>. We strive to respond to all inquiries within 24-48 hours.
         </p>
 
         <h3 className="text-2xl font-semibold text-cyan-600 mb-4">
@@ -50,7 +50,7 @@ const Support = () => {
             6. Community Forum (Coming Soon)
         </h3>
         <p className="text-gray-700 mb-6 text-justify">
-            We are working on launching a community forum where users can interact, share experiences, and ask for help from both our support team and fellow users. This will be a valuable resource for troubleshooting and learning more about Congent AI services.
+            We are working on launching a community forum where users can interact, share experiences, and ask for help from both our support team and fellow users. This will be a valuable resource for troubleshooting and learning more about NeuroBrain services.
         </p>
 
         <h3 className="text-2xl font-semibold text-cyan-600 mb-4">
@@ -67,16 +67,16 @@ const Support = () => {
             You can also reach out to us via our official social media channels. Our team is active on:
         </p>
         <ul className="list-disc pl-5 mt-2 text-gray-700">
-            <li><a href="https://facebook.com/congentai" className="text-cyan-600">Facebook</a></li>
-            <li><a href="https://twitter.com/congentai" className="text-cyan-600">Twitter</a></li>
-            <li><a href="https://linkedin.com/company/congentai" className="text-cyan-600">LinkedIn</a></li>
+            <li><a href="https://facebook.com/NeuroBrain" className="text-cyan-600">Facebook</a></li>
+            <li><a href="https://twitter.com/NeuroBrain" className="text-cyan-600">Twitter</a></li>
+            <li><a href="https://linkedin.com/company/NeuroBrain" className="text-cyan-600">LinkedIn</a></li>
         </ul>
 
         <h3 className="text-2xl font-semibold text-cyan-600 mb-4">
             9. Feedback & Suggestions
         </h3>
         <p className="text-gray-700 mb-6 text-justify">
-            We value your feedback and suggestions. If you have any ideas on how we can improve our services or features, please send us an email at <a href="mailto:feedback@congentai.com" className="text-cyan-600">feedback@congentai.com</a>. Your input helps us improve and evolve Congent AI to better meet your needs.
+            We value your feedback and suggestions. If you have any ideas on how we can improve our services or features, please send us an email at <a href="mailto:feedback@NeuroBrain.com" className="text-cyan-600">feedback@NeuroBrain.com</a>. Your input helps us improve and evolve NeuroBrain to better meet your needs.
         </p>
 
         <h3 className="text-2xl font-semibold text-cyan-600 mb-4">
