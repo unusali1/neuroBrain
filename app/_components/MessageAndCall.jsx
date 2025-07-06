@@ -258,7 +258,7 @@ const MessageAndCall = () => {
       <div>
         {isPopoverOpen ? null : (
           <div className="fixed bottom-4 right-20 bg-orange-50 text-sm rounded-tl-full rounded-bl-full rounded-br-full p-2 shadow-xl cursor-pointer">
-            <p>chat with us </p>
+            <p>Chat with us </p>
           </div>
         )}
         <div className="fixed bottom-4 right-4 bg-blue-700 rounded-full p-3 shadow-lg cursor-pointer hover:bg-blue-600 overflow-hidden">

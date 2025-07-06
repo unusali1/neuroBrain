@@ -9,11 +9,11 @@ const Icon = dynamic(() => import("@iconify/react").then((mod) => mod.Icon), {
 });
 
 const products = [
-  { id: 1, name: "AbroadMate", path: "/automatedChatbot" },
-  { id: 2, name: "Mufti AI", path: "/dataSecurity" },
-  { id: 3, name: "Klyra AI", path: "/contact" },
-  { id: 4, name: "Doctor AI", path: "/support" },
-  { id: 5, name: "Trip AI", path: "/virtualReality" },
+  { id: 1, name: "AbroadMate", path: "https://abroadmate-ai-landing.lovable.app/" },
+  { id: 2, name: "Mufti AI", path: null },
+  { id: 3, name: "Klyra AI", path: null },
+  { id: 4, name: "Doctor AI", path: null },
+  { id: 5, name: "Trip AI", path: null },
 ];
 
 const services = [
@@ -101,17 +101,24 @@ function Footer() {
             Products
           </h3>
           <ul className="space-y-3">
-            {products.map((item) => (
-              <motion.li key={item.id} variants={itemVariants}>
-                <Link
-                  href={item.path}
-                  className="text-gray-300 hover:text-white hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
-                >
-                  {item.name}
-                </Link>
-              </motion.li>
-            ))}
-          </ul>
+  {products.map((item) => (
+    <motion.li key={item.id} variants={itemVariants}>
+      {item.path ? (
+        <Link
+          href={item.path}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
+        >
+          {item.name}
+        </Link>
+      ) : (
+        <span className="text-gray-500 cursor-not-allowed">{item.name}</span>
+      )}
+    </motion.li>
+  ))}
+</ul>
+
         </motion.nav>
 
         {/* Services */}
