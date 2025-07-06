@@ -101,7 +101,7 @@ export default function IndustrySolutions() {
   };
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b relative overflow-hidden">
+    <section className="py-12 sm:py-20 px-6 bg-gradient-to-b relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(6,182,212,0.1)_0%,_transparent_70%)] pointer-events-none" />
 

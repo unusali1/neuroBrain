@@ -57,11 +57,11 @@ export default function Blogs() {
             {/* Right Smaller Blogs */}
             <div className="space-y-8">
               {/* Blog Item */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden flex">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col sm:flex-row">
                 <Image
-                  src={blog2} // Replace with actual image URL
+                  src={blog2} 
                   alt="Feature Image"
-                  className="object-cover"
+                  className="object-cover w-full sm:w-48"
                   width={220}
                   height={120}
                 />
@@ -85,11 +85,11 @@ export default function Blogs() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden flex">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col sm:flex-row">
                 <Image
                   src={blog3} // Replace with actual image URL
                   alt="Feature Image"
-                  className="object-cover"
+                  className="object-cover w-full sm:w-48"
                   width={220}
                   height={120}
                 />
@@ -111,11 +111,11 @@ export default function Blogs() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden flex">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col sm:flex-row">
                 <Image
                   src={blog4} // Replace with actual image URL
                   alt="Feature Image"
-                  className="object-cover"
+                  className="object-cover w-full sm:w-48"
                   width={220}
                   height={120}
                 />

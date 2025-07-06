@@ -78,12 +78,18 @@ export default function Header() {
     <header className={`${pathname === "/" ? "bg-gray-100" : "bg-none"}`}>
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between py-6 px-6 sm:px-0"
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <Image alt="Logo" src={logo} width={250} height={20} />
+            <Image 
+            alt="Logo"
+             src={logo}
+              width={250} 
+              height={20} 
+              className="w-40 sm:w-48"
+              />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -144,13 +150,13 @@ export default function Header() {
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
               <Image
                 alt="Logo"
                 src={logo}
                 className=""
                 width={120}
                 height={120}
+                
               />
             </a>
             <button
@@ -171,7 +177,18 @@ export default function Header() {
                 >
                   Home
                 </a>
-
+                 <a
+                  href="product"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  Products
+                </a>
+                 <a
+                  href="services"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  Services
+                </a>
                 <a
                   href="pricing"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
@@ -191,13 +208,7 @@ export default function Header() {
                 >
                   About Us
                 </a>
-                <a
-                  href="contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Contact Us
-                </a>
-
+                
                 <a
                   href="contact"
                   className="-mx-3 block rounded-sm  py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"

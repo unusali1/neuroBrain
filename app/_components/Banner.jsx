@@ -65,10 +65,10 @@ const Banner = () => {
             animate="visible"
             variants={fadeInUp}
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tight text-gray-900 tracking-tight font-sans">
+            <h1 className="text-xl sm:text-4xl lg:text-4xl font-extrabold leading-tight text-gray-900 tracking-tight font-sans">
               Automate Your Customer Support
             </h1>
-            <h2 className="text-lg sm:text-xl lg:text-md text-indigo-600 font-semibold">
+            <h2 className="text-sm sm:text-xl lg:text-md text-indigo-600 font-semibold">
               <TypeAnimation
                 sequence={[
                   "with AI chatbot and voice assistant for 24/7 support",
@@ -85,7 +85,7 @@ const Banner = () => {
             </h2>
 
             {/* Steps Section */}
-            <div className="flex flex-col items-start space-y-6 ">
+            <div className="flex flex-col items-start space-y-6 px-6 sm:px-0 ">
               {steps.map((step, index) => (
                 <motion.div
                   key={index}
@@ -110,20 +110,20 @@ const Banner = () => {
               ))}
             </div>
 
-            <p className="text-base sm:text-lg text-gray-700 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 max-w-xl mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0">
               Boost service efficiency by 10X with AI-driven chatbots and
               seamless human agent handovers for smoother customer interactions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-row sm:flex-row gap-4 px-6 sm:px-0 justify-center lg:justify-start">
               <Button
-                className="px-8 py-6 border-2 border-indigo-600 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg font-semibold"
+                className="px-4 py-6 sm:px-8 sm:py-6 border-2 border-indigo-600 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg font-semibold"
                 onClick={() => router.push("/contact")}
                 aria-label="Start a free trial"
               >
                 Start Free Trial
               </Button>
               <Button
-                className="px-8 py-6 border-2 border-indigo-600 text-indigo-600 rounded-lg shadow-md hover:bg-indigo-50 hover:scale-105 transition-all duration-300 text-lg font-semibold"
+                className="px-4 py-6 sm:px-8 sm:py-6 border-2 border-indigo-600 text-indigo-600 rounded-lg shadow-md hover:bg-indigo-50 hover:scale-105 transition-all duration-300 text-lg font-semibold"
                 variant="outline"
                 onClick={() => router.push("/contact")}
                 aria-label="Book a demo"

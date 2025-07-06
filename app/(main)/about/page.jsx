@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../../../public/assets/industri.jpg";
+import aboutImg from "../../../public/assets/chatBot.gif";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import LookingCustomChatBot from "@/app/_components/LookingCustomChatBot";
@@ -33,7 +33,7 @@ const features = [
 
 const Page = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-6 sm:py-20">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6">
@@ -76,7 +76,7 @@ const Page = () => {
         </div>
 
         {/* Image */}
-        <div className="rounded-lg overflow-hidden shadow-xl">
+        <div className="rounded-lg overflow-hidden ">
           <Image
             src={aboutImg}
             alt="NeuroBrain About Illustration"

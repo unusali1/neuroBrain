@@ -177,7 +177,6 @@ So, let’s try to understand what an LLM is, how it works and why a business sh
     date: "April 9, 2024",
   },
 
-  
 ];
 
 
